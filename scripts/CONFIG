@@ -1,0 +1,3 @@
+IMAGE_TAG=mjtdev/mq:latest
+NAME=mq
+DATA_DIR="./../data"
