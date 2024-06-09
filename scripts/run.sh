@@ -10,6 +10,6 @@ ENV_FILE="${SCRIPT_DIR}/../.env"
 
 docker run -it --rm \
   --name "${NAME}" \
-  -p 5901:5901 \
-  -v "${SCRIPT_DIR}/${DATA_DIR}:/home/user/Monero/wallets/our-wallet:rw" \
-  --env-file "${ENV_FILE}"  "${IMAGE_TAG}"
+  -p 9222:9222 -v "${SCRIPT_DIR}/../nats.conf:/nats.conf" \
+  --env-file "${ENV_FILE}"  "${IMAGE_TAG}" \
+  -c /nats.conf
