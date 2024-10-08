@@ -8,7 +8,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ENV_FILE="${SCRIPT_DIR}/../.env"
 
-docker run -d -it --rm \
+docker run -it --rm -d \
   --name "${NAME}" \
   -p 9222:9222 -v "${SCRIPT_DIR}/../nats.conf:/nats.conf" \
   --env-file "${ENV_FILE}" \
