@@ -1,3 +1,4 @@
 IMAGE_TAG=mjtdev/mq:latest
 NAME=mq
+NETWORK_NAME=mq_network
 DATA_DIR="./../data"
